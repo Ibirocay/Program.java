@@ -1,54 +1,58 @@
 public class Course {
-    int index;
-    int level;
-    String[] genres;
-    static final int PRICE = 1800;
     String[] students;
+    String genre;
+    int level;
+    static final int PRICE = 1800;
 
+    /** Denna metod skapar en instans (ett objekt)
+     * returnerar denna
+     * @return salsa
+     */
     public static Course getSalsa(){
         Course salsa = new Course();
-        salsa.index = 0;
         salsa.level = 1;
-        salsa.genres = DanceSchool.genres;
-        salsa.students = DanceSchool.students;
+        salsa.genre = "Salsa";
+        salsa.students = new String[]{DanceStudio.dancers[0],DanceStudio.dancers[2],DanceStudio.dancers[4]};
 
         return salsa;
     }
+
+    /** Denna metod skapar en instans (ett objekt)
+     * och returnerar denna
+     * @return bachata
+     */
     public static Course getBachata(){
         Course bachata = new Course();
-        bachata.index = 1;
         bachata.level = 2;
-        bachata.genres = DanceSchool.genres;
-        bachata.students = DanceSchool.students;
+        bachata.genre = "Bachata";
+        bachata.students = new String[]{DanceStudio.dancers[1],DanceStudio.dancers[3],DanceStudio.dancers[5]};
 
         return bachata;
     }
+
+    /** Denna metod skapar en instans (ett objekt)
+     * och returnerar denna
+     * @return kizomba
+     */
     public static Course getKizomba(){
         Course kizomba = new Course();
-        kizomba.index = 2;
         kizomba.level = 3;
-        kizomba.genres = DanceSchool.genres;
-        kizomba.students = DanceSchool.students;
+        kizomba.genre = "Kizomba";
+        kizomba.students = new String[]{DanceStudio.dancers[2],DanceStudio.dancers[5],DanceStudio.dancers[3]};
 
         return kizomba;
     }
 
-    public static void print (Course c) {
-        //Course salsaCourse = Course.getSalsa();
-        System.out.println("Kurs: " + c.genres[c.index] + ", nivå " + c.level);
-        System.out.println("Elev: " + c.students[c.index]);
-        System.out.println("Pris: " + Course.PRICE);
-
-       /* Course bachataCourse = Course.getBachata();
-        System.out.println("Kurs: " + bachataCourse.genres[1] + ", nivå " + bachataCourse.level);
-        System.out.println("Elev: " + bachataCourse.students[0]);
-        System.out.println("Pris: " + Course.PRICE);
-
-        Course kizombaCourse = Course.getKizomba();
-        System.out.println("Kurs: " + kizombaCourse.genres[2] + ", nivå " + kizombaCourse.level);
-        System.out.println("Elev: " + kizombaCourse.students[0]);
-        System.out.println("Pris: " + Course.PRICE);
-
-        */
+    /** Denna metod printar ut i terminalen den sammanfattade infon för
+     * respektive instans
+     */
+    public void print () {
+        System.out.println("Kurs: " + genre.toUpperCase() + ", nivå " + level);
+        System.out.println("Elever: ");
+        for (String student : students) {
+            System.out.println(student);
+        }
+        System.out.println();
+        System.out.println("Pris: " + PRICE + " kr");
     }
 }
