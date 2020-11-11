@@ -10,9 +10,9 @@ public class Program {
         Scanner scan = new Scanner(System.in);
         while(scan.hasNextLine()) {
             String input = scan.nextLine();
-            Course search = studio.getCourseWithGenre(input);
-            if (search != null){
-                search.print();
+            Course searchedCourse = studio.getCourseWithGenre(input);
+            if (searchedCourse != null){
+                searchedCourse.print();
             }
             else {
                 System.out.println("Systemet hittade inte " + input +
