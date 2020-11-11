@@ -4,8 +4,8 @@ public class Course {
     int level;
     static final int PRICE = 1800;
 
-    /** Denna metod skapar en instans (ett objekt)
-     * returnerar denna
+    /** This method creates an instance (an object)
+     * and returns it
      * @return salsa
      */
     public static Course getSalsa(){
@@ -17,8 +17,8 @@ public class Course {
         return salsa;
     }
 
-    /** Denna metod skapar en instans (ett objekt)
-     * och returnerar denna
+    /** This method creates an instance (an object)
+     * and returns it
      * @return bachata
      */
     public static Course getBachata(){
@@ -30,8 +30,8 @@ public class Course {
         return bachata;
     }
 
-    /** Denna metod skapar en instans (ett objekt)
-     * och returnerar denna
+    /** This method creates an instance (an object)
+     * and returns it
      * @return kizomba
      */
     public static Course getKizomba(){
@@ -43,16 +43,16 @@ public class Course {
         return kizomba;
     }
 
-    /** Denna metod printar ut i terminalen den sammanfattade infon för
-     * respektive instans
+    /** This method prints the collected info
+     * for each instance to the terminal
      */
     public void print () {
-        System.out.println("Kurs: " + genre.toUpperCase() + ", nivå " + level);
-        System.out.println("Elever: ");
+        System.out.println("Class: " + genre.toUpperCase() + ", level " + level);
+        System.out.println("Students: ");
         for (String student : students) {
             System.out.println(student);
         }
         System.out.println();
-        System.out.println("Pris: " + PRICE + " kr");
+        System.out.println("Price: " + PRICE + " kr");
     }
 }

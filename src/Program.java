@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args){
         DanceStudio studio = new DanceStudio();
-        System.out.println("Välkommen till DanceStudio!" +
-                "\nAvsluta med CTRL+Z eller CTRL+D (Win) CMD+D (Mac)");
-        System.out.println("Vilken kurslista vill du titta på? Salsa, Bachata el. Kizomba? ");
+        System.out.println("Welcome to The DanceStudio!" +
+                "\nExit with CTRL+Z or CTRL+D (Win) CMD+D (Mac)");
+        System.out.println("What class list are you looking for? Salsa, Bachata or Kizomba? ");
 
         Scanner scan = new Scanner(System.in);
         while(scan.hasNextLine()) {
@@ -15,8 +15,8 @@ public class Program {
                 searchedCourse.print();
             }
             else {
-                System.out.println("Systemet hittade inte " + input +
-                "\nAnvänd endast sökord: Salsa, Bachata el. Kizomba");
+                System.out.println("The system couldn't find " + input +
+                "\nPlease only use these search words: Salsa, Bachata or Kizomba");
             }
         }
     }
